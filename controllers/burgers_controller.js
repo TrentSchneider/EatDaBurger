@@ -1,8 +1,8 @@
-var express = require("express");
+const express = require("express");
 
-var router = express.Router();
+const router = express.Router();
 
-var burger = require("../models/burger");
+const burger = require("../models/burger");
 
 router.get("/", function (req, res) {
   burger.all(function (data) {
