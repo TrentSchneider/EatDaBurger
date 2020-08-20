@@ -2,15 +2,14 @@ var express = require("express");
 
 var router = express.Router();
 
-var cat = require("../models/burger");
+var burger = require("../models/burger");
 
 router.get("/", function (req, res) {
-  connection.query("SELECT * FROM burger", function (err, data) {
-    if (err) {
-      return res.status(500).end();
-    }
-    console.log(data);
-    res.render("index", { burger: data });
+  burger.all(function (data) {
+    let hbsObject = {
+      burger: data,
+    };
+    res.render("index", hbsObject);
   });
 });
 
