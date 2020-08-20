@@ -1,11 +1,43 @@
-<ul>
-  {{#each plans}}
+<style>
+  #undevoured{
+    float: left;
+  }
+  #devoured{
+    float: right;
+  }
+</style>
+<h2>Eat-Da-Burger</h2>
+<form id="createburger" class="button-size">
+  <textarea type="text" name="burger"></textarea>
+  <button type="submit">Submit</button>
+  <p>Enter a burger you want to eat and then click the "Submit" button.</p>
+</form>
+
+<ul id="undevoured">
+  <h3>Untouched Burgers</h3>
+  {{#each burger}}
+  {{!-- TODO switch out custom helper with if(checks for truthy) and unless(checks for falsy) --}}
+  {{#unless this.devoured}}
   <li>
     <p>
-      {{this.id}}. {{this.plan}}
+      {{this.id}}. {{this.burger}}
 
-      <button data-planid="{{this.id}}" class="delplan">Delete Plan!</button>
+      {{!-- <button data-planid="{{this.id}}" class="delplan">Devour!</button> --}}
     </p>
   </li>
+  {{/unless}}
   {{/each}}
-</ul>
+</ul> 
+<ul id="devoured">
+  <h3>Devoured Burgers</h3>
+  {{#each burger}}
+  {{#if this.devoured}}
+  <li>
+    <p>
+      {{this.id}}. {{this.burger}}
+
+    </p>
+  </li>
+  {{/if}}
+  {{/each}}
+</ul> 
