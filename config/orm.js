@@ -17,6 +17,13 @@ const orm = {
       cb(res);
     });
   },
+  update: function (vals, cb) {
+    let queryString = "UPDATE burger SET devoured=1 WHERE id=?";
+    connection.query(queryString, vals, function (err, res) {
+      if (err) throw err;
+      cb(res);
+    });
+  },
 };
 
 module.exports = orm;

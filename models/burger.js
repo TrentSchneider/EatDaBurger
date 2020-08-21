@@ -11,6 +11,11 @@ const burger = {
       cb(res);
     });
   },
+  update: function (vals, cb) {
+    orm.update(vals, function (res) {
+      cb(res);
+    });
+  },
 };
 
 module.exports = burger;

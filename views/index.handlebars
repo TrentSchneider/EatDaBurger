@@ -20,9 +20,10 @@
   <li>
     <p>
       {{this.id}}. {{this.name}}
-
-      {{!-- <button data-planid="{{this.id}}" class="delplan">Devour!</button> --}}
     </p>
+    <button class="devour" data-id="{{this.id}}" data-name="{{this.name}}">
+	  	Devour!
+  	</button>
   </li>
   {{/unless}}
   {{/each}}

@@ -5,12 +5,24 @@ $(function () {
     var newBurg = {
       name: $("#bu").val().trim(),
     };
-    console.log(newBurg);
     $.ajax("/api/burger", {
       type: "POST",
       data: newBurg,
     }).then(function () {
-      console.log("New Burger Added");
+      location.reload();
+    });
+  });
+
+  $(".devour").on("click", function (event) {
+    let id = $(this).data("id");
+    let name = $(this).data("name");
+    const dev = {
+      id: id,
+    };
+    $.ajax("/api/burger/" + id, {
+      type: "PUT",
+      data: dev,
+    }).then(function () {
       location.reload();
     });
   });
