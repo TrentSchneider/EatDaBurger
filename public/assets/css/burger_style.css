@@ -1,0 +1,17 @@
+#undevoured {
+  float: left;
+}
+#devoured {
+  float: right;
+}
+#title,
+#createburger {
+  text-align: center;
+}
+.noDot {
+  list-style: none;
+}
+img {
+  height: 100px;
+  width: auto;
+}

@@ -1,21 +1,19 @@
- <button class="btn btn-info">Reset</button>
 <div class="container">
   <div class="row d-flex justify-content-center">
-    <div class="col-6 card my-5">
-      <img src="/assets/img/burger.png" alt="Burger Image">
+    <div class="col-4 card">
       <h2 id="title">Eat-Da-Burger</h2>
       <form id="createburger" class="button-size">
-        <textarea class="col-6" type="text" id="bu" rows="3"></textarea>
+        <textarea type="text" id="bu" rows="3"></textarea>
         <br />
         <button class="btn btn-primary" type="submit">Submit</button>
-        <p class="my-3">
+        <p>
           Enter a burger you want to eat and then click the "Submit" button.
         </p>
       </form>
     </div>
   </div>
-  <div class="row d-flex justify-content-around">
-    <div class="col-4">
+  <div class="row">
+    <div class="col-4 float-sm-left">
       <h3>Untouched Burgers</h3>
       <ul id="undevoured" class="noDot">
         {{#each burger}} {{#unless this.devoured}}
@@ -34,7 +32,7 @@
         {{/unless}} {{/each}}
       </ul>
     </div>
-    <div class="col-4">
+    <div class="col-4 float-sm-right">
       <ul id="devoured" class="noDot">
         <h3>Devoured Burgers</h3>
         {{#each burger}} {{#if this.devoured}}
