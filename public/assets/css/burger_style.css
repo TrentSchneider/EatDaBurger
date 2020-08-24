@@ -7,6 +7,10 @@
 .noDot {
   list-style: none;
 }
+.noPad {
+  padding: none;
+  width: 100%;
+}
 img {
   height: 200px;
   width: 225px;
@@ -15,4 +19,27 @@ img {
 }
 .card {
   border: none;
+}
+.bg-warning-light {
+  background-color: rgb(250, 205, 121);
+}
+li {
+  border: solid;
+  border-width: 0.5px;
+  border-radius: 5px;
+  width: 75%;
+}
+/* #blist {
+  width: 50%;
+} */
+p {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.input-group {
+  width: 100%;
+}
+.buffer {
+  margin-left: auto;
+  margin-right: auto;
 }

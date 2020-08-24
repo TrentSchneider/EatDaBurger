@@ -27,7 +27,10 @@ const orm = {
   delete: function (cb) {
     connection.query("DELETE FROM burger", function (err, res) {
       if (err) throw err;
-      cb(res);
+      connection.query("TRUNCATE TABLE burger", function (err, res) {
+        if (err) throw err;
+        cb(res);
+      });
     });
   },
 };
