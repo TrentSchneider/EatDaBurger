@@ -13,6 +13,12 @@ router.get("/", function (req, res) {
   });
 });
 
+router.delete("/api/burger/reset", function (req, res) {
+  burger.delete(function (result) {
+    console.log(result.changedRows);
+  });
+});
+
 router.post("/api/burger", function (req, res) {
   burger.create(req.body.name, function (result) {
     res.json({ burger: result.newBurg });

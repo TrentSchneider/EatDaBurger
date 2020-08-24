@@ -24,6 +24,12 @@ const orm = {
       cb(res);
     });
   },
+  delete: function (cb) {
+    connection.query("DELETE FROM burger", function (err, res) {
+      if (err) throw err;
+      cb(res);
+    });
+  },
 };
 
 module.exports = orm;

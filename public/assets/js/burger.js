@@ -1,4 +1,11 @@
 $(function () {
+  $("#reset").on("click", function (event) {
+    $.ajax("/api/burger/reset", {
+      type: "DELETE",
+    }).then(function () {
+      location.reload();
+    });
+  });
   $("#createburger").on("submit", function (event) {
     event.preventDefault();
 
