@@ -1,9 +1,9 @@
- <button class="btn btn-info" id="reset">Reset</button>
+ <button class="btn btn-info m-3" id="reset">Reset</button>
 <div class="container">
   <div class="row d-flex justify-content-center">
-    <div class="col-6 card my-5">
+    <div class="col-6 card mb-5 text-center bg-warning">
       <img src="/assets/img/burger.png" alt="Burger Image">
-      <h2 id="title">Eat-Da-Burger</h2>
+      <h2 id="title" class="mt-2">Eat-Da-Burger</h2>
       <form id="createburger" class="button-size">
         <textarea class="col-6" type="text" id="bu" rows="3"></textarea>
         <br />
@@ -23,7 +23,7 @@
           <p>
             {{this.id}}. {{this.name}}
             <button
-              class="devour btn btn-danger"
+              class="devour btn btn-danger ml-3"
               data-id="{{this.id}}"
               data-name="{{this.name}}"
             >
