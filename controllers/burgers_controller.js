@@ -15,14 +15,13 @@ router.get("/", function (req, res) {
 
 router.delete("/api/burger/reset", function (req, res) {
   burger.delete(function (result) {
-    res.json(result);
-    console.log(result.changedRows);
+    res.status(200).end();
   });
 });
 
 router.post("/api/burger", function (req, res) {
   burger.create(req.body.name, function (result) {
-    res.json({ burger: result.newBurg });
+    res.status(200).end();
   });
 });
 
