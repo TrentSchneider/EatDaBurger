@@ -1,3 +1,4 @@
+{{!-- resets the database --}}
 <button id="reset" class="btn btn-info m-1">Reset</button>
 <div class="container">
   <div class="row d-flex justify-content-center">
@@ -21,6 +22,7 @@
     </div>
   </div>
   <div class="row d-flex justify-content-around">
+    {{!-- lists items where devoured = 0 --}}
     <div class="col-5">
       <h3 class="text-center">Untouched Burgers</h3>
       <ul id="undevoured" class="noDot noPad">
@@ -42,6 +44,7 @@
         {{/unless}} {{/each}}
       </ul>
     </div>
+        {{!-- lists items where devoured = 1 --}}
     <div class="col-5">
       <ul id="devoured" class="noDot noPad">
         <h3>Devoured Burgers</h3>

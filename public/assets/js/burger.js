@@ -1,3 +1,4 @@
+// links buttons to CRUD
 $(function () {
   $("#reset").on("click", function (event) {
     $.ajax("/api/burger/reset", {

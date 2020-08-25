@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 const burger = require("../models/burger");
-
+// main site route
 router.get("/", function (req, res) {
   burger.all(function (data) {
     let hbsObject = {
@@ -12,7 +12,7 @@ router.get("/", function (req, res) {
     res.render("index", hbsObject);
   });
 });
-
+// api routes for CRUD
 router.delete("/api/burger/reset", function (req, res) {
   burger.delete(function (result) {
     res.status(200).end();
