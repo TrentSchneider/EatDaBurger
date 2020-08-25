@@ -15,6 +15,7 @@ router.get("/", function (req, res) {
 
 router.delete("/api/burger/reset", function (req, res) {
   burger.delete(function (result) {
+    res.json(result);
     console.log(result.changedRows);
   });
 });
